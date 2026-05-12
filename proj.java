@@ -23,6 +23,7 @@ public class proj {
       System.out.println("0. to Exit");
       System.out.print("Choice: ");
       choice = scanner.nextInt();
+      scanner.nextLine();
 
       switch (choice) {
         case 1:
@@ -52,6 +53,8 @@ public class proj {
             withdrawMon(check);
           }
           break;
+        case 0:
+          break;
         default:
           System.out.println("Invalid choice ⚠️");
           break;
@@ -63,20 +66,22 @@ public class proj {
   }
 
   public static void creatAcc() {
-    while (accountCou >= ACCOUNT_MAX) {
+    if (accountCou >= ACCOUNT_MAX) {
       System.out.println("you hit the max number for account is 5, you can't add more!");
       return;
     }
 
-    System.out.println("Enter Name for Account: ");
+    System.out.print("Enter Name for Account: ");
     String name = scanner.nextLine();
 
-    System.out.println("Enter Initial deposit: ");
+    System.out.print("Enter Initial deposit: ");
     double intialDep = scanner.nextDouble();
+    scanner.nextLine();
 
     while (intialDep < 0) {
-      System.out.println("");
+      System.out.println("must be over zero ‼, try agine: ");
       intialDep = scanner.nextDouble();
+      scanner.nextLine();
     }
 
     names[accountCou] = name;
@@ -92,12 +97,14 @@ public class proj {
       System.out.println((i + 1) + ". " + names[i]);
     }
 
-    System.out.println("Enter The Account Number: ");
+    System.out.print("Enter The Account Number: ");
     int accountNum = scanner.nextInt();
+    scanner.nextLine();
 
     while (accountNum < 1 || accountNum > accountCou) {
-      System.out.println("invalid account number, try agine: ");
+      System.out.print("invalid account number ‼, try agine: ");
       accountNum = scanner.nextInt();
+      scanner.nextLine();
     }
 
     return accountNum - 1;
@@ -105,37 +112,40 @@ public class proj {
 
   public static void checkBal(int check1) {
     System.out.println("account name: " + names[check1]);
-    System.out.println("balance is: " + balance[check1]);
+    System.out.println("balance is: " + balance[check1] + "$");
   }
 
   public static void DepositMon(int check2) {
-    System.out.print("Enter How Mech You Went To Deposit: ");
+    System.out.print("How Mech Money Do You Went To Deposit: ");
     double deposit = scanner.nextDouble();
+    scanner.nextLine();
 
     while (deposit <= 0) {
-      System.out.print("Must be over than zero, try agine: ");
+      System.out.print("must be over than zero ‼, try agine: ");
       deposit = scanner.nextDouble();
+      scanner.nextLine();
     }
 
     balance[check2] += deposit;
-    System.out.println("new balance is: " + balance[check2]);
+    System.out.println("new balance is: " + balance[check2] + "$");
   }
 
   public static void withdrawMon(int check3) {
-    System.out.print("Enter How Mech You Went To Withdraw: ");
+    System.out.print("How Mech Money Do You Went To Withdraw: ");
     double withdraw = scanner.nextDouble();
+    scanner.nextLine();
 
-    while (withdraw > balance[check3]) {
-      System.out.print("Must be you have that mech meony in your account, try agine: ");
+    while (withdraw > balance[check3] || withdraw <= 0) {
+      if (withdraw > balance[check3]) {
+        System.out.print("Not enough money in your account 😢, try again: ");
+      } else {
+        System.out.print("Must be over zero ‼, try again: ");
+      }
       withdraw = scanner.nextDouble();
-    }
-
-    while (withdraw <= 0) {
-      System.out.print("Must be over than zero, try agine: ");
-      withdraw = scanner.nextDouble();
+      scanner.nextLine();
     }
 
     balance[check3] -= withdraw;
-    System.out.println("new balance is: " + balance[check3]);
+    System.out.println("new balance is: " + balance[check3] + "$");
   }
 }
