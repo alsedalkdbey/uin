@@ -15,6 +15,7 @@ public class proj {
     int choice, check;
 
     do {
+      System.out.println("");
       System.out.println("Welcome To ATM 🏦");
       System.out.println("1. Creat Account");
       System.out.println("2. Check Balance");
