@@ -1,0 +1,62 @@
+Welcome To ATM 🏦
+1. Creat Account
+2. Check Balance
+3. Deposit Money
+4. Withdraw Money
+0. to Exit
+Choice: 1
+Enter Name for Account: Yazeed
+Enter Initial deposit: 200
+your account name is Yazeedand the balance is 200.0$
+Welcome To ATM 🏦
+1. Creat Account
+2. Check Balance
+3. Deposit Money
+4. Withdraw Money
+0. to Exit
+Choice: 2
+=> Choice Account
+1. Yazeed
+Enter The Account Number: 1
+account name: Yazeed
+balance is: 200.0$
+Welcome To ATM 🏦
+1. Creat Account
+2. Check Balance
+3. Deposit Money
+4. Withdraw Money
+0. to Exit
+Choice: 3
+=> Choice Account
+1. Yazeed
+Enter The Account Number: 1
+How Mech Money Do You Went To Deposit: 300
+new balance is: 500.0$
+Welcome To ATM 🏦
+1. Creat Account
+2. Check Balance
+3. Deposit Money
+4. Withdraw Money
+0. to Exit
+Choice: 4
+=> Choice Account
+1. Yazeed
+Enter The Account Number: 1
+How Mech Money Do You Went To Withdraw: 500
+new balance is: 0.0$
+Welcome To ATM 🏦
+1. Creat Account
+2. Check Balance
+3. Deposit Money
+4. Withdraw Money
+0. to Exit
+Choice: 6
+Invalid choice ⚠️
+Welcome To ATM 🏦
+1. Creat Account
+2. Check Balance
+3. Deposit Money
+4. Withdraw Money
+0. to Exit
+Choice: 0
+see you later 😁
