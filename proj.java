@@ -13,10 +13,10 @@ public class proj {
 
   public static void main(String[] args) {
     int choice, check;
-
+    System.out.println("Welcome To ATM 🏦");
+    
     do {
       System.out.println("");
-      System.out.println("Welcome To ATM 🏦");
       System.out.println("1. Creat Account");
       System.out.println("2. Check Balance");
       System.out.println("3. Deposit Money");
